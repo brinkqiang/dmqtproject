@@ -34,11 +34,11 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 # Tell CMake to create the helloworld executable
-add_executable(hello
-    ${CMAKE_CURRENT_SOURCE_DIR}/tools/hello/main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/tools/hello/mainwindow.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/tools/hello/mainwindow.ui
-    ${CMAKE_CURRENT_SOURCE_DIR}/tools/hello/resources.qrc)
+add_executable(helloworld
+    ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/mainwindow.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/mainwindow.ui
+    ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/resources.qrc)
 
 # Add the Qt5 Widgets for linking
-target_link_libraries(hello ${QT5_LIBS})
+target_link_libraries(helloworld ${QT5_LIBS})
