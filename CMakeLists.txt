@@ -12,7 +12,7 @@ ModuleSetWinCompilerFlags()
 
 # Find includes in the build directories
 
-find_package(Qt5 COMPONENTS Core Widgets Gui Network Sql REQUIRED )
+find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED )
 
 IF(Qt5_FOUND)
     MESSAGE(STATUS "Qt5_FOUND Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network Qt5::Sql")
@@ -31,4 +31,4 @@ add_executable(helloworld
     ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/resources.qrc)
 
 # Add the Qt5 Widgets for linking
-target_link_libraries(helloworld Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network Qt5::Sql)
+target_link_libraries(helloworld Qt5::Core Qt5::Widgets Qt5::Gui)
