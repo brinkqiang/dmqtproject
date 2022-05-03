@@ -21,6 +21,9 @@ Copyright (c) 2013-2018 brinkqiang (brink.qiang@gmail.com)
 [win-badge]: https://github.com/brinkqiang/dmqtproject/workflows/win/badge.svg "win build status"
 [win-link]:  https://github.com/brinkqiang/dmqtproject/actions/workflows/win.yml "win build status"
 
+## env
+https://download.qt.io/archive/qt/5.14/5.14.2/
+
 ## Intro
 dmqtproject
 ```cpp
