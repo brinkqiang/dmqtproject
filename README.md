@@ -23,9 +23,9 @@ Copyright (c) 2013-2018 brinkqiang (brink.qiang@gmail.com)
 
 ## env
 
-1. vcpkg install qt5:qt5:x64-windows
+1. vcpkg install qt5:x64-windows
 
-2. vcpkg install qt5:qt5:x64-windows-static -> failed
+2. vcpkg install qt5:x64-windows-static -> failed
 
 ## Intro
 dmqtproject
