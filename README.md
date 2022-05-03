@@ -22,7 +22,10 @@ Copyright (c) 2013-2018 brinkqiang (brink.qiang@gmail.com)
 [win-link]:  https://github.com/brinkqiang/dmqtproject/actions/workflows/win.yml "win build status"
 
 ## env
-https://download.qt.io/archive/qt/5.14/5.14.2/
+
+1. vcpkg install qt5:qt5:x64-windows
+
+2. vcpkg install qt5:qt5:x64-windows-static -> failed
 
 ## Intro
 dmqtproject
