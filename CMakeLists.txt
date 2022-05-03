@@ -1,32 +1,23 @@
 cmake_minimum_required(VERSION 3.8)
 
+SET(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/../dmvcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
 project(dmqtproject)
 
 LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 INCLUDE(cmake/ModuleImport.cmake)
 INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
-ModuleSetWinCompilerFlags()
+#ModuleSetWinCompilerFlags()
 
 # Find includes in the build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-option(STATIC_QT "Use static Qt5 libraries" OFF)
+find_package(Qt5 COMPONENTS Core Widgets Gui Network Sql REQUIRED )
 
-if(STATIC_QT)
-    set(QT_PREFIX StaticQt5)
-else()
-    set(QT_PREFIX Qt5)
-endif()
-
-set(QT5_PKGS Core Widgets Gui Network Sql)
-
-set(QT5_LIBS "")
-
-foreach(pkg ${QT5_PKGS})
-    find_package(${QT_PREFIX}${pkg} REQUIRED)
-    list(APPEND QT5_LIBS ${QT_PREFIX}::${pkg})
-endforeach()
+IF(Qt5_FOUND)
+    MESSAGE(STATUS "Qt5_FOUND Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network Qt5::Sql")
+ENDIF(Qt5_FOUND)
 
 # Turn on automatic invocation of the MOC
 set(CMAKE_AUTOMOC ON)
@@ -41,4 +32,4 @@ add_executable(helloworld
     ${CMAKE_CURRENT_SOURCE_DIR}/tools/helloworld/resources.qrc)
 
 # Add the Qt5 Widgets for linking
-target_link_libraries(helloworld ${QT5_LIBS})
+target_link_libraries(helloworld Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network Qt5::Sql)
