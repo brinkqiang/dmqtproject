@@ -8,10 +8,9 @@ LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 INCLUDE(cmake/ModuleImport.cmake)
 INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
-#ModuleSetWinCompilerFlags()
+ModuleSetWinCompilerFlags()
 
 # Find includes in the build directories
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5 COMPONENTS Core Widgets Gui Network Sql REQUIRED )
 
