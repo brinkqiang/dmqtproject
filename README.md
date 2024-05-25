@@ -32,6 +32,5 @@ dmqtproject
 ```cpp
 ```
 ## Contacts
-[![Join the chat](https://badges.gitter.im/brinkqiang/dmqtproject/Lobby.svg)](https://gitter.im/brinkqiang/dmqtproject)
 
 ## Thanks
